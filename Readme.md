@@ -7,9 +7,6 @@ The project is a 2D action game with some bullethell and roguelite elements.
 ## Credits:
 
 The project uses art available from opengameart.
- 
-Joe Williamson
-https://opengameart.org/content/roguelike-monsters
 
 Redshrike
 https://opengameart.org/content/rpg-enemies-11-dragons
