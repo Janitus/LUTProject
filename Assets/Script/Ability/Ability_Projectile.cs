@@ -5,6 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(ProjectileSpawner))]
 public class Ability_Projectile : Ability
 {
+    [Header("Spawner")]
     ProjectileSpawner spawner;
     private void Awake () => spawner = GetComponent<ProjectileSpawner>();
     

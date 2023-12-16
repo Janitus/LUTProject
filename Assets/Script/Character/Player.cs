@@ -12,8 +12,22 @@ public class Player : Character
         instance = this;
     }
 
-    private void Update () {
+    protected override void Update () {
+        base.Update ();
+        ReadKeyboard ();
+        ReadMouse ();
+    }
+    private void ReadKeyboard () {
         playerInput = new Vector2 (Input.GetAxisRaw ("Horizontal"), Input.GetAxisRaw ("Vertical")).normalized;
         Move (playerInput);
+    }
+
+    private void ReadMouse () {
+        Vector2 mousePosition = Input.mousePosition;
+        Vector2 worldPosition = Camera.main.ScreenToWorldPoint (mousePosition);
+        aim = worldPosition - (Vector2)transform.position;
+
+        if (Input.GetMouseButton (0)) abilities[0].Activate ();
+        if (Input.GetMouseButton (1)) abilities[1].Activate ();
     }
 }

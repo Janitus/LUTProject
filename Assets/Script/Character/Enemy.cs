@@ -8,21 +8,16 @@ public class Enemy : Character
         player = Player.instance;
     }
 
-    private void Update () {
+    protected override void Update () {
+        base.Update ();
         if (player == null) return;
-
-        if (castingTime > 0) {
-            castingTime -= Time.deltaTime;
-            Move (Vector2.zero);
-            return;
-        }
 
         MoveTowardsPlayer ();
         CheckAbilities ();
     }
 
     void CheckAbilities() {
-        if (abilities.Length == 0) return;
+        if (castingTime > 0) return;
 
         AimAtPlayer ();
         foreach (Ability ability in abilities) if (ability.status == Ability.Status.Ready) ability.Activate ();
@@ -33,7 +28,21 @@ public class Enemy : Character
         Move (directionToPlayer);
     }
 
-    void AimAtPlayer () => aim = (player.transform.position);
+    void AimAtPlayer () {
+        Vector2 playerPosition = player.transform.position;
+        aim = (playerPosition - (Vector2)transform.position).normalized;
+    }
 
     public override void RefreshAim () => AimAtPlayer ();
+
+    public override void Die () {
+        Destroy (gameObject);
+    }
+
+#if UNITY_EDITOR
+    private void OnDrawGizmos () {
+        Gizmos.color = Color.red;
+        Gizmos.DrawLine (transform.position, transform.position + (Vector3)aim * 2);
+    }
+    #endif
 }

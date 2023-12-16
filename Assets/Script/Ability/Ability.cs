@@ -8,8 +8,9 @@ public abstract class Ability : MonoBehaviour
     public Status status;
 
     public float cooldownDuration = 1f;
-    public float castDuration = 1f;
-    public bool activateAtEnd = false;
+    public float castDuration = 1f; // The time the ability locks the character in place
+    public float activationDelay = 1f; // The activation timer after the casting was started
+    public List<Condition> conditions = new List<Condition> ();
 
     private float cooldown = 0f;
     protected Character character;
@@ -20,19 +21,23 @@ public abstract class Ability : MonoBehaviour
     }
 
     public void Activate() {
-        if (status != Status.Ready) return;
+        if (status != Status.Ready || !ConditionsMet ()) return;
 
         status = Status.Cooldown;
         cooldown = cooldownDuration;
         character.castingTime = castDuration;
 
-        if (activateAtEnd)
-            StartCoroutine (ActivationDelay ());
-        else
-            HandleActivation ();
+        StartCoroutine (ActivationDelay ());
     }
+
+    private bool ConditionsMet () {
+        foreach (var condition in conditions)
+            if (!condition.IsMet (character)) return false;
+        return true;
+    }
+
     private IEnumerator ActivationDelay () {
-        yield return new WaitForSeconds (castDuration);
+        yield return new WaitForSeconds (activationDelay);
         HandleActivation ();
     }
 
@@ -47,4 +52,11 @@ public abstract class Ability : MonoBehaviour
             status = Status.Ready;
         }
     }
+
+    #if UNITY_EDITOR
+    private void OnValidate () {
+        if (activationDelay > castDuration) activationDelay = castDuration;
+        if (activationDelay < 0f) activationDelay = 0f;
+    }
+    #endif
 }

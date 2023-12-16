@@ -17,7 +17,7 @@ public abstract class Character : MonoBehaviour
     public float castingTime;
     public Health healthSystem;
 
-    [SerializeField] protected Ability[] abilities;
+    protected Ability[] abilities;
 
     protected virtual void Awake () {
         rb = GetComponent<Rigidbody2D>();
@@ -25,12 +25,19 @@ public abstract class Character : MonoBehaviour
         healthSystem = GetComponent<Health>();
     }
 
-    protected void Move ( Vector2 direction ) => movement = direction * moveSpeed;
+    protected void Move ( Vector2 direction ) {
+        if (castingTime > 0) movement = Vector2.zero;
+        else movement = direction * moveSpeed;
+    }
 
     public void Force ( Vector2 direction ) => push += direction;
 
     void FixedUpdate () {
         HandleMovement ();
+    }
+
+    protected virtual void Update () {
+        if (castingTime > 0) castingTime -= Time.deltaTime;
     }
 
     void HandleMovement() {
