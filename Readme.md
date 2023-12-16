@@ -9,6 +9,6 @@ The project is a 2D action game with some bullethell and roguelite elements.
 The project uses art available from opengameart.
 
 Redshrike
-https://opengameart.org/content/rpg-enemies-11-dragons
-https://opengameart.org/content/10-basic-rpg-enemies
-https://opengameart.org/content/6-more-rpg-enemies
+- https://opengameart.org/content/rpg-enemies-11-dragons
+- https://opengameart.org/content/10-basic-rpg-enemies
+- https://opengameart.org/content/6-more-rpg-enemies
