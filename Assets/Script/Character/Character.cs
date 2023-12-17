@@ -54,4 +54,11 @@ public abstract class Character : MonoBehaviour
     public virtual void RefreshAim () {}
 
     public virtual void Die() {}
+
+    protected void SetSpriteDirection () {
+        if (aim.x < 0) 
+            transform.localScale = new Vector3 (-Mathf.Abs (transform.localScale.x), transform.localScale.y, transform.localScale.z);
+        else if (aim.x > 0)
+            transform.localScale = new Vector3 (Mathf.Abs (transform.localScale.x), transform.localScale.y, transform.localScale.z);
+    }
 }

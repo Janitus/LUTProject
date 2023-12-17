@@ -7,13 +7,14 @@ public class Health : MonoBehaviour
 {
     public int maxHealth = 1;
     public int armor = 0;
-    
-    private int health = 1;
+
+    public int CurrentHealth { get; private set; }
+
     private Character character;
 
     private void Start () {
         character = GetComponent<Character>();
-        health = maxHealth;
+        CurrentHealth = maxHealth;
     }
 
     public void TakeDamage (int amount, int penetration) {
@@ -22,14 +23,14 @@ public class Health : MonoBehaviour
         int incomingDamage = (int)(amount * damageMitigation);
 
         if (incomingDamage <= 0) return;
-        health -= incomingDamage;
+        CurrentHealth -= incomingDamage;
 
-        if (health > 0) return;
+        if (CurrentHealth > 0) return;
         character.Die ();
     }
 
     public void TakeHealing (int amount) {
-        health += amount;
-        if (health > maxHealth) health = maxHealth;
+        CurrentHealth += amount;
+        if (CurrentHealth > maxHealth) CurrentHealth = maxHealth;
     }
 }

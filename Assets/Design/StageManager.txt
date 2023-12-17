@@ -1,0 +1,46 @@
+Stagemanager:
+
+- List of stages to choose
+
+Process:
+
+1. Start game with default first round.
+2. Spawn until maximum capacity reached, wait with additional spawns otherwise.
+3. Player finishes round by killing all enemies.
+4. Wait few seconds, grant player a choice to make (The reward and challenge for the next round)
+5. Player makes the choice
+6. Repeat 2 to 6, until player dies
+
+Stage Data (per):
+
+- List of possible enemies to spawn and the number of enemies to spawn from these lists
+- Can have multiple lists (to ensure consistent difficulty with variety of enemies and amount)
+- Enemy Capacity
+
+Challenges:
+
+- Each challenge has a minimum stage level req, so that you can't random some insane challenge in the beginning.) Also max level.
+
+- Monsters receive speed
+- Monsters receive more hp
+- Player reduced armor
+- Player reduced speed
+- Additional list of enemies
+
+Rewards:
+
+- +1 Damage
+- +1 Projectile (And +5 spread)
+- -7.5% attack duration (multiplicative)
+- +0.2s projectile duration
+- +1 projectile speed
+- +1 move speed
+- +1 hpreg/s
+- +10 max hp
+- +1 armor
+- -10% dash cd (multiplicative)
+- +1 knockback
+
+
+
+

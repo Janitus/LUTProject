@@ -16,6 +16,8 @@ public class Player : Character
         base.Update ();
         ReadKeyboard ();
         ReadMouse ();
+        SetSpriteDirection ();
+        ConstraintPlayerToPlayArea ();
     }
     private void ReadKeyboard () {
         playerInput = new Vector2 (Input.GetAxisRaw ("Horizontal"), Input.GetAxisRaw ("Vertical")).normalized;
@@ -29,5 +31,16 @@ public class Player : Character
 
         if (Input.GetMouseButton (0)) abilities[0].Activate ();
         if (Input.GetMouseButton (1)) abilities[1].Activate ();
+    }
+
+    private void ConstraintPlayerToPlayArea() {
+        float minX = -20;
+        float maxX = 20;
+        float minY = -12.5f;
+        float maxY = 12.5f;
+
+        float clampedX = Mathf.Clamp (transform.position.x, minX, maxX);
+        float clampedY = Mathf.Clamp (transform.position.y, minY, maxY);
+        transform.position = new Vector3 (clampedX, clampedY, transform.position.z);
     }
 }

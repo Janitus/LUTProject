@@ -3,6 +3,7 @@ using UnityEngine;
 public class Enemy : Character
 {
     private Player player;
+    private bool dead = false;
 
     private void Start () {
         player = Player.instance;
@@ -20,7 +21,12 @@ public class Enemy : Character
         if (castingTime > 0) return;
 
         AimAtPlayer ();
-        foreach (Ability ability in abilities) if (ability.status == Ability.Status.Ready) ability.Activate ();
+        foreach (Ability ability in abilities) {
+            if (ability.status == Ability.Status.Ready) {
+                ability.Activate ();
+                return;
+            }
+        }
     }
 
     void MoveTowardsPlayer () {
@@ -31,11 +37,15 @@ public class Enemy : Character
     void AimAtPlayer () {
         Vector2 playerPosition = player.transform.position;
         aim = (playerPosition - (Vector2)transform.position).normalized;
+        SetSpriteDirection ();
     }
 
     public override void RefreshAim () => AimAtPlayer ();
 
     public override void Die () {
+        if (dead) return; // Weird bug that causes this to happen multiple times.
+        dead = true;
+        StageManager.instance.EnemyDefeated ();
         Destroy (gameObject);
     }
 
