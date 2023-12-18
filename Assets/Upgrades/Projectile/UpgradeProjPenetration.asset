@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f9cbc7c6039cd44da8f2b9163216ff6, type: 3}
   m_Name: UpgradeProjPenetration
   m_EditorClassIdentifier: 
+  icon: {fileID: -1765350888, guid: 14845df7bb05db042aa2517aee0c05b1, type: 3}
   maximumLevel: 1
   currentLevel: 0
   penPower: 3

@@ -9,10 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cbafa49b167ab744d8f0cd9045e4aec5, type: 3}
-  m_Name: UpgradeKnock
+  m_Script: {fileID: 11500000, guid: 1439ef8d7ff60b242bd6f3764469cffd, type: 3}
+  m_Name: UpgradeDashCD
   m_EditorClassIdentifier: 
-  icon: {fileID: -1765350888, guid: 14845df7bb05db042aa2517aee0c05b1, type: 3}
-  maximumLevel: 5
+  icon: {fileID: -1455031522, guid: 14845df7bb05db042aa2517aee0c05b1, type: 3}
+  maximumLevel: 4
   currentLevel: 0
-  knockPower: 1
+  reducedCooldown: 1

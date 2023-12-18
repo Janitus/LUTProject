@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5b5e7abb8651324fb0294edfb9657bc, type: 3}
   m_Name: UpgradeProjAmount
   m_EditorClassIdentifier: 
+  icon: {fileID: -1765350888, guid: 14845df7bb05db042aa2517aee0c05b1, type: 3}
   maximumLevel: 10
   currentLevel: 0
   amountOfProjectiles: 1

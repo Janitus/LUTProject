@@ -4,8 +4,15 @@ using UnityEngine;
 public class Upgrade_ProjectilePenetration : Upgrade
 {
     public int penPower;
-    public override void Apply ( Player player ) {
+    protected override void HandleApply () {
         ProjectileSpawner ps = player.transform.GetChild (0).GetComponent<ProjectileSpawner> ();
         ps.penetration += penPower;
     }
+
+    public override string GetDescription () {
+        ProjectileSpawner ps = player.transform.GetChild (0).GetComponent<ProjectileSpawner> ();
+        int newPenetration = ps.penetration + penPower;
+        return $"Increases projectile penetration power from {ps.penetration} to {newPenetration}.";
+    }
+
 }

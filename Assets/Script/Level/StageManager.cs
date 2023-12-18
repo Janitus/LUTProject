@@ -23,14 +23,9 @@ public class StageManager : MonoBehaviour
         StartStage ();
     }
 
-    private void StartStage () {
-        if(stageNumber >= stages.Count) {
-            print ("TODO Game over");
-            return;
-        }
-
+    public void StartStage () {
+        player.GetComponent<Health> ().TakeHealing (25);
         currentStage = Instantiate(stages[stageNumber++]);
-
         StartCoroutine(SpawnRoutine ());
     }
 
@@ -77,7 +72,13 @@ public class StageManager : MonoBehaviour
     public void EnemyDefeated () {
         enemyCurrentAmount--;
         if (enemyCurrentAmount <= 0 && !IsSpawningEnemies ()) {
-            StartStage ();
+            if (stageNumber >= stages.Count) {
+                print ("TODO Game over");
+                return;
+            }
+            else {
+                UpgradeManager.instance.DisplayUpgrades (3);
+            }
         }
     }
 

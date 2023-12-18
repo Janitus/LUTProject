@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cac09c6a927e97d47ad2205fa6ae9e27, type: 3}
   m_Name: UpgradeAbilitySpeed
   m_EditorClassIdentifier: 
+  icon: {fileID: -1765350888, guid: 14845df7bb05db042aa2517aee0c05b1, type: 3}
   maximumLevel: 5
   currentLevel: 0
   attackSpeedBonus: 0.1
