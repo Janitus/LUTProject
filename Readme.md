@@ -12,3 +12,6 @@ Redshrike
 - https://opengameart.org/content/rpg-enemies-11-dragons
 - https://opengameart.org/content/10-basic-rpg-enemies
 - https://opengameart.org/content/6-more-rpg-enemies
+
+Kyrise
+- https://opengameart.org/content/kyrises-free-16x16-rpg-icon-pack
