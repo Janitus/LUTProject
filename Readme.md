@@ -15,3 +15,6 @@ Redshrike
 
 Kyrise
 - https://opengameart.org/content/kyrises-free-16x16-rpg-icon-pack
+
+SubspaceAudio
+- https://opengameart.org/content/512-sound-effects-8-bit-style
