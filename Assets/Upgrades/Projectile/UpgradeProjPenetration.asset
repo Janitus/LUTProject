@@ -15,4 +15,4 @@ MonoBehaviour:
   icon: {fileID: -1765350888, guid: 14845df7bb05db042aa2517aee0c05b1, type: 3}
   maximumLevel: 1
   currentLevel: 0
-  penPower: 3
+  penPower: 6

@@ -8,11 +8,23 @@ public class ProjectilePoolManager : MonoBehaviour
 
     public static ProjectilePoolManager Instance { get; private set; }
 
-    private void Awake () => Instance = this;
+    private void Awake () {
+        Instance = this;
+        PrewarmPool (1500);
+    }
+
+    private void PrewarmPool ( int count ) {
+        for (int i = 0; i < count; i++) {
+            Projectile newProjectile = Instantiate (projectilePrefab);
+            newProjectile.gameObject.SetActive (false);
+            projectiles.Enqueue (newProjectile);
+        }
+    }
 
     public Projectile GetProjectile () {
         if (projectiles.Count > 0) {
             Projectile projectile = projectiles.Dequeue ();
+            projectile.gameObject.SetActive (true);
             return projectile;
         }
 

@@ -2,12 +2,16 @@ using UnityEngine;
 
 public class Enemy : Character
 {
+    public bool isBoss = false;
+
     private Player player;
     private bool dead = false;
 
     private void Start () {
         player = Player.instance;
         StageManager.instance.RegisterNewEnemy ();
+
+        if (isBoss) BossUI.instance.SetBoss(this);
     }
 
     protected override void Update () {

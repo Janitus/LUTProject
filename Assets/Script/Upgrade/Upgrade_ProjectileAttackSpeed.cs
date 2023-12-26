@@ -6,7 +6,7 @@ public class Upgrade_ProjectileAttackSpeed : Upgrade
     public float attackSpeedBonus = 0.05f;
     protected override void HandleApply () {
         Ability_Projectile ps = player.transform.GetChild (0).GetComponent<Ability_Projectile> ();
-        ps.cooldownDuration *= (1f - 0.05f);
+        ps.cooldownDuration *= (1f - attackSpeedBonus);
     }
 
     public override string GetDescription () {

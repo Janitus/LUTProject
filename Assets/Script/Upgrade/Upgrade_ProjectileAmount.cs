@@ -17,6 +17,6 @@ public class Upgrade_ProjectileAmount : Upgrade
     public override string GetDescription () {
         ProjectileSpawner ps = player.transform.GetChild (0).GetComponent<ProjectileSpawner> ();
         int amount = ps.amountOfProjectiles;
-        return "Increases the amount of projectiles from "+ amount  + " to "+ (amount+1);
+        return "Increases the amount of projectiles from "+ amount  + " to "+ (amount+2);
     }
 }

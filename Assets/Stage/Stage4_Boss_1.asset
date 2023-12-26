@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e02e797ea81b9747a18504ef44b54a5, type: 3}
+  m_Name: Stage4_Boss_1
+  m_EditorClassIdentifier: 
+  enemyCapacity: 1
+  enemiesToSpawn:
+  - enemyPrefabs:
+    - {fileID: 1439871857930936865, guid: 231979d6bbe67984282ad8e4553802e1, type: 3}
+    spawnAmount: 1

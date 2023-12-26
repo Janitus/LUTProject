@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class StageManager : MonoBehaviour
 {
+    #if UNITY_EDITOR
+    public bool testMode = false;
+    #endif
     public float spawnDistanceMin = 20f;
     public float spawnDistanceMax = 25f;
     public static StageManager instance;
@@ -20,7 +23,9 @@ public class StageManager : MonoBehaviour
     private void Start () {
         instance = this;
         player = Player.instance;
-        return;
+        #if UNITY_EDITOR
+        if (testMode) return;
+        #endif
         StartStage ();
     }
 
@@ -79,7 +84,7 @@ public class StageManager : MonoBehaviour
                 return;
             }
             else {
-                UpgradeManager.instance.DisplayUpgrades (3);
+                UpgradeManager.instance.DisplayUpgrades (5);
             }
         }
     }

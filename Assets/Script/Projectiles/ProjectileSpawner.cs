@@ -32,6 +32,8 @@ public class ProjectileSpawner : MonoBehaviour
     public float knockback;
     public int pierceAmount;
 
+    public bool ignoreCharacter = false;
+
     private Character character;
 
     private void Start () => character = GetComponentInParent<Character> ();
@@ -46,7 +48,10 @@ public class ProjectileSpawner : MonoBehaviour
         }
     }
     private void Spawn () {
-        Vector2 baseDirection = character.aim.normalized;
+        Vector2 baseDirection;
+        if (character != null && !ignoreCharacter) baseDirection = character.aim.normalized;
+        else baseDirection = transform.up;
+
         float angleStep = amountOfProjectiles > 1 ? spread / (amountOfProjectiles - 1) : 0;
 
         for (int i = 0; i < amountOfProjectiles; i++) {

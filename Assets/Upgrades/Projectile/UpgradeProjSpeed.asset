@@ -15,4 +15,4 @@ MonoBehaviour:
   icon: {fileID: -1765350888, guid: 14845df7bb05db042aa2517aee0c05b1, type: 3}
   maximumLevel: 4
   currentLevel: 0
-  speed: 1
+  speed: 4

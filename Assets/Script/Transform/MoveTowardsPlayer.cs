@@ -5,6 +5,8 @@ public class MoveTowardsPlayer : MonoBehaviour
     public float movementSpeed = 5f;
     public float rotationSpeed = 200f;
     public bool initiallyFaceAway = false;
+    public Transform spriteChild;
+    public bool ignoreSpriteRotation = false;
 
     private Transform target;
     private bool initialRotationSet = false;
@@ -19,6 +21,7 @@ public class MoveTowardsPlayer : MonoBehaviour
         RotateTowards (target.position);
         transform.position += transform.up * movementSpeed * Time.deltaTime;
     }
+
 
     private void SetInitialRotation () {
         if (target == null) return;
@@ -42,5 +45,12 @@ public class MoveTowardsPlayer : MonoBehaviour
         float angle = Mathf.Atan2 (directionToTarget.y, directionToTarget.x) * Mathf.Rad2Deg - 90;
         Quaternion q = Quaternion.AngleAxis (angle, Vector3.forward);
         transform.rotation = Quaternion.RotateTowards (transform.rotation, q, rotationSpeed * Time.deltaTime);
+    }
+
+    private void LateUpdate () {
+        if (ignoreSpriteRotation) return;
+        if (spriteChild != null) {
+            spriteChild.rotation = Quaternion.identity;
+        }
     }
 }

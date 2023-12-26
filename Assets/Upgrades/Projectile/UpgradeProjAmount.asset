@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: -1765350888, guid: 14845df7bb05db042aa2517aee0c05b1, type: 3}
   maximumLevel: 10
-  currentLevel: 0
-  amountOfProjectiles: 1
-  amountOfSpread: 5
+  currentLevel: 9
+  amountOfProjectiles: 2
+  amountOfSpread: 10

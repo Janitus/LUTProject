@@ -12,7 +12,7 @@ public class Upgrade_ProjectilePierce : Upgrade
     public override string GetDescription () {
         ProjectileSpawner ps = player.transform.GetChild (0).GetComponent<ProjectileSpawner> ();
         int newPenetration = ps.pierceAmount + piercePower;
-        return $"Increases projectile penetration power from {ps.pierceAmount} to {newPenetration}.";
+        return $"Increases projectile pierce power from {ps.pierceAmount} to {newPenetration}.";
     }
 
 }
