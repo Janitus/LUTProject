@@ -1,3 +1,4 @@
+using System.Drawing;
 using UnityEngine;
 
 [RequireComponent (typeof (SpriteRenderer))]
@@ -26,6 +27,7 @@ public class Projectile : MonoBehaviour
         rb = GetComponent<Rigidbody2D> ();
         sr = GetComponent<SpriteRenderer> ();
         mpb = new MaterialPropertyBlock ();
+        sr.SetPropertyBlock (mpb);
     }
 
     public void Initialize (    float maxSpeed,
@@ -34,23 +36,27 @@ public class Projectile : MonoBehaviour
                                 int penetration,
                                 float knockback,
                                 int pierceAmount,
-                                Color color,
+                                UnityEngine.Color color,
                                 float radius,
                                 AnimationCurve sizeOverLifetime,
                                 AnimationCurve accelerationOverLifetime,
                                 Vector2 targetDirection) {
+
+        if (mpb == null) mpb = new MaterialPropertyBlock ();
+
         this.maxSpeed = maxSpeed;
         this.lifetime = lifetime;
         this.damage = damage;
         this.penetration = penetration;
         this.knockback = knockback;
         this.pierceAmount = pierceAmount;
-        mpb.SetColor ("_Glow", color);
-        sr.SetPropertyBlock (mpb);
         this.radius = radius;
         this.sizeOverLifetime = sizeOverLifetime;
         this.accelerationOverLifetime = accelerationOverLifetime;
         this.targetDirection = targetDirection;
+
+        mpb.SetColor ("_Glow", color);
+        sr.SetPropertyBlock (mpb);
 
         currentLifetime = lifetime;
         initialized = true;
@@ -67,7 +73,7 @@ public class Projectile : MonoBehaviour
         }
 
         float lifePercent = Mathf.Clamp01(1 - (currentLifetime / lifetime));
-        HandleVelocity(lifePercent);
+        HandleVelocity (lifePercent);
         HandleSize (lifePercent);
     }
 

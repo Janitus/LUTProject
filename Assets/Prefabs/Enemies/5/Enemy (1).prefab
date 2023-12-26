@@ -46,8 +46,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectile: {fileID: 6791575688149192050, guid: fcea9e46d539925479f1506d31bf2abb, type: 3}
-  color: {r: 0.5582843, g: 1, b: 0, a: 0}
-  radius: 6
+  color: {r: 0.48045635, g: 2, b: 0, a: 0}
+  radius: 3
   sizeOverLifetime:
     serializedVersion: 2
     m_Curve:

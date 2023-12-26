@@ -63,28 +63,4 @@ public class ProjectileSpawner : MonoBehaviour
             p.transform.rotation = Quaternion.AngleAxis (angle, Vector3.forward);
         }
     }
-
-    //private void Spawn () {
-    //    Vector2 direction = (character.aim - (Vector2)transform.position).normalized;
-    //
-    //    float spreadToUse = spread;
-    //    //if (amountOfProjectiles == 1) spreadToUse = 0f;
-    //
-    //    print ("spread "+spreadToUse);
-    //
-    //    float angleStep = amountOfProjectiles > 1 ? spreadToUse / (amountOfProjectiles - 1) : 0;
-    //
-    //    print ("anglestep " + angleStep);
-    //
-    //    for (int i = 0; i < amountOfProjectiles; i++) {
-    //        float projectileAngle = -spreadToUse / 2 + angleStep * i;
-    //        Vector2 projectileDirection = Quaternion.Euler (0, 0, projectileAngle) * direction;
-    //
-    //        Projectile p = ProjectilePoolManager.Instance.GetProjectile ();
-    //        p.ownerTag = transform.root.tag;
-    //        p.Initialize (maxSpeed, lifetime, damage, penetration, knockback, pierceAmount, color, radius, sizeOverLifetime, accelerationOverLifetime, projectileDirection);
-    //        p.transform.position = transform.position;
-    //        p.transform.rotation = Quaternion.Euler (0, 0, projectileAngle);
-    //    }
-    //}
 }
