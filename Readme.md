@@ -8,7 +8,7 @@ The project is a 2D action game with some bullethell and roguelite elements.
 
 ## Credits:
 
-The project uses art and sound available from opengameart.
+The project uses sprite art and sounds available from opengameart.
 
 Redshrike
 - https://opengameart.org/content/rpg-enemies-11-dragons
