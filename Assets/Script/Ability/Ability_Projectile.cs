@@ -6,8 +6,8 @@ using UnityEngine;
 public class Ability_Projectile : Ability
 {
     [Header("Spawner")]
-    ProjectileSpawner spawner;
-    private void Awake () => spawner = GetComponent<ProjectileSpawner>();
+    ProjectileSpawner ps;
+    private void Awake () => ps = GetComponent<ProjectileSpawner>();
     
-    protected override void HandleActivation () => spawner.SpawnProjectiles ();
+    protected override void HandleActivation () => ps.SpawnProjectiles ();
 }

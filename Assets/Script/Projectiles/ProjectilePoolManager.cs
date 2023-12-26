@@ -13,7 +13,6 @@ public class ProjectilePoolManager : MonoBehaviour
     public Projectile GetProjectile () {
         if (projectiles.Count > 0) {
             Projectile projectile = projectiles.Dequeue ();
-            projectile.gameObject.SetActive (true);
             return projectile;
         }
 

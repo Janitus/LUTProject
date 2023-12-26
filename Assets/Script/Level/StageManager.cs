@@ -20,6 +20,7 @@ public class StageManager : MonoBehaviour
     private void Start () {
         instance = this;
         player = Player.instance;
+        return;
         StartStage ();
     }
 
@@ -66,11 +67,12 @@ public class StageManager : MonoBehaviour
         Vector2 spawnPosition = (Vector2)player.transform.position + spawnDirection * randomSpawnDistance;
 
         Instantiate (enemyPrefab, spawnPosition, Quaternion.identity);
-        enemyCurrentAmount++;
     }
 
     public void EnemyDefeated () {
         enemyCurrentAmount--;
+        if (currentStage == null) return;
+
         if (enemyCurrentAmount <= 0 && !IsSpawningEnemies ()) {
             if (stageNumber >= stages.Count) {
                 print ("TODO Game over");
@@ -81,6 +83,8 @@ public class StageManager : MonoBehaviour
             }
         }
     }
+
+    public void RegisterNewEnemy () => enemyCurrentAmount++;
 
     private bool IsSpawningEnemies () => currentStage.enemiesToSpawn.Any (esd => esd.spawnAmount > 0);
 }

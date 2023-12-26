@@ -108,7 +108,154 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: more rpg enemies_0
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 188
+        width: 46
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98ce98f483bd8a549ba96d3cb707a92d
+      internalID: 586211051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: more rpg enemies_1
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 190
+        width: 59
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75f33987cbe79d14f8b9bbda0d633ff3
+      internalID: 1910029252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: more rpg enemies_2
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 195
+        width: 50
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e83f24773cb0e3498fdaf321a5880bf
+      internalID: -2079715082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: more rpg enemies_26
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 106
+        width: 63
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1a7838000761ae45b07e7234e0b31a1
+      internalID: 1626946641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: more rpg enemies_49
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 31
+        width: 42
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a60879317329c047be05f236d955932
+      internalID: -149687671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: more rpg enemies_50
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 19
+        width: 53
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 440fd17e2a8e0c444b6dcbbe45f128f2
+      internalID: -1106152138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: more rpg enemies_51
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 23
+        width: 99
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 473a3d2f8ebf22b48b4a243d8a0a8ef3
+      internalID: -593586564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -119,7 +266,60 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      more rpg enemies_0: 586211051
+      more rpg enemies_1: 1910029252
+      more rpg enemies_10: 1125541662
+      more rpg enemies_11: 465886520
+      more rpg enemies_12: -413486663
+      more rpg enemies_13: -243745323
+      more rpg enemies_14: 698679699
+      more rpg enemies_15: 1197192593
+      more rpg enemies_16: 509929712
+      more rpg enemies_17: 1758457658
+      more rpg enemies_18: -363727613
+      more rpg enemies_19: -1277027891
+      more rpg enemies_2: -2079715082
+      more rpg enemies_20: 1538508169
+      more rpg enemies_21: 1543963471
+      more rpg enemies_22: 465790809
+      more rpg enemies_23: -735051379
+      more rpg enemies_24: 772536549
+      more rpg enemies_25: -267461114
+      more rpg enemies_26: 1626946641
+      more rpg enemies_27: -1384335646
+      more rpg enemies_28: 81162956
+      more rpg enemies_29: -715033130
+      more rpg enemies_3: -2012032153
+      more rpg enemies_30: -1103845217
+      more rpg enemies_31: -948846625
+      more rpg enemies_32: -886135979
+      more rpg enemies_33: -784651892
+      more rpg enemies_34: -275066751
+      more rpg enemies_35: -1093745982
+      more rpg enemies_36: 686311426
+      more rpg enemies_37: 1803372028
+      more rpg enemies_38: -951543986
+      more rpg enemies_39: 1559255088
+      more rpg enemies_4: -161000347
+      more rpg enemies_40: 199567394
+      more rpg enemies_41: -1814487310
+      more rpg enemies_42: -1805136231
+      more rpg enemies_43: -999416984
+      more rpg enemies_44: -678104447
+      more rpg enemies_45: -2112401409
+      more rpg enemies_46: 420525223
+      more rpg enemies_47: -496394952
+      more rpg enemies_48: 948521069
+      more rpg enemies_49: -149687671
+      more rpg enemies_5: -802539238
+      more rpg enemies_50: -1106152138
+      more rpg enemies_51: -593586564
+      more rpg enemies_52: 1931666313
+      more rpg enemies_6: 1019619356
+      more rpg enemies_7: -1393357451
+      more rpg enemies_8: -898052640
+      more rpg enemies_9: 1910454425
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

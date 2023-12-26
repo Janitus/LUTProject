@@ -7,6 +7,7 @@ public class Enemy : Character
 
     private void Start () {
         player = Player.instance;
+        StageManager.instance.RegisterNewEnemy ();
     }
 
     protected override void Update () {

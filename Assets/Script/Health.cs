@@ -17,12 +17,14 @@ public class Health : MonoBehaviour
         CurrentHealth = maxHealth;
     }
 
-    public void TakeDamage (int amount, int penetration) {
+    public void TakeDamage (int amount, int penetration = 0) {
+        if (amount <= 0) return;
+
         int effectiveArmor = Mathf.Max(armor - penetration, 0);
         float damageMitigation = 10f / (10f + effectiveArmor);
         int incomingDamage = (int)(amount * damageMitigation);
 
-        if (incomingDamage <= 0) return;
+        if (incomingDamage <= 0) incomingDamage = 1;
         CurrentHealth -= incomingDamage;
 
         if (CurrentHealth > 0) return;

@@ -50,7 +50,8 @@ public class ProjectileSpawner : MonoBehaviour
         float angleStep = amountOfProjectiles > 1 ? spread / (amountOfProjectiles - 1) : 0;
 
         for (int i = 0; i < amountOfProjectiles; i++) {
-            float projectileAngle = -spread / 2 + angleStep * i;
+            float randInaccuracy = Random.Range (-inaccuracy, inaccuracy);
+            float projectileAngle = -spread / 2 + angleStep * i + randInaccuracy;
             Vector2 projectileDirection = Quaternion.Euler (0, 0, projectileAngle) * baseDirection;
 
             Projectile p = ProjectilePoolManager.Instance.GetProjectile ();

@@ -38,7 +38,7 @@ public class Projectile : MonoBehaviour
                                 float radius,
                                 AnimationCurve sizeOverLifetime,
                                 AnimationCurve accelerationOverLifetime,
-                                Vector2 targetDirection ) {
+                                Vector2 targetDirection) {
         this.maxSpeed = maxSpeed;
         this.lifetime = lifetime;
         this.damage = damage;
@@ -73,6 +73,7 @@ public class Projectile : MonoBehaviour
 
     private void HandleVelocity ( float lifeTime ) {
         float currentSpeed = maxSpeed * accelerationOverLifetime.Evaluate (lifeTime);
+
         rb.velocity = targetDirection * currentSpeed;
         HandleSize (lifeTime);
     }
@@ -91,13 +92,13 @@ public class Projectile : MonoBehaviour
         character.healthSystem.TakeDamage (damage, penetration);
         character.Force (targetDirection * knockback);
 
-        CheckPenetrationExpiry ();
+        CheckExpiry ();
     }
 
-    private void CheckPenetrationExpiry() {
-        if (penetration == 0) return; // Penetration 0 indicates it never expires
-        penetration -= 1;
-        if (penetration > 0) return;
+    private void CheckExpiry() {
+        if (pierceAmount == 0) return; // Penetration 0 indicates it never expires
+        pierceAmount -= 1;
+        if (pierceAmount > 0) return;
 
         gameObject.tag = "Projectile";
         ProjectilePoolManager.Instance.ReturnProjectile (this);
