@@ -4,9 +4,11 @@ This is a unity project made for LUT course: CT60A5401 Game Development Project.
 
 The project is a 2D action game with some bullethell and roguelite elements.
 
+![snapshot](https://i.gyazo.com/ccd65e4f5b29e5f02a96d4d02fe72dcb.jpg)
+
 ## Credits:
 
-The project uses art available from opengameart.
+The project uses art and sound available from opengameart.
 
 Redshrike
 - https://opengameart.org/content/rpg-enemies-11-dragons
