@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e02e797ea81b9747a18504ef44b54a5, type: 3}
   m_Name: Stage10
   m_EditorClassIdentifier: 
-  enemyCapacity: 50
+  enemyCapacity: 30
   enemiesToSpawn:
   - enemyPrefabs:
     - {fileID: 8981396032516892366, guid: b57e579248d76e94081ab2fc14a970b9, type: 3}

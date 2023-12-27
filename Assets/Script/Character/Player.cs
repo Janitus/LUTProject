@@ -20,6 +20,7 @@ public class Player : Character
         ConstraintPlayerToPlayArea ();
     }
     private void ReadKeyboard () {
+        if (Input.GetKeyDown (KeyCode.Escape)) Die ();
         playerInput = new Vector2 (Input.GetAxisRaw ("Horizontal"), Input.GetAxisRaw ("Vertical")).normalized;
         Move (playerInput);
     }
@@ -42,5 +43,10 @@ public class Player : Character
         float clampedX = Mathf.Clamp (transform.position.x, minX, maxX);
         float clampedY = Mathf.Clamp (transform.position.y, minY, maxY);
         transform.position = new Vector3 (clampedX, clampedY, transform.position.z);
+    }
+
+    public override void Die () {
+        StageManager.instance.HandleLoseGame ();
+        Destroy (this.gameObject);
     }
 }

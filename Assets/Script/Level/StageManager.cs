@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class StageManager : MonoBehaviour
 {
@@ -13,16 +14,22 @@ public class StageManager : MonoBehaviour
     public static StageManager instance;
     public List<StageData> stages;
     private StageData currentStage;
-    private int stageNumber = 0;
+    private int stageNumber;
 
     Player player;
 
     private int enemyCapacity = 50;
     private int enemyCurrentAmount = 0;
+    private int enemiesKilled;
 
     private void Start () {
         instance = this;
         player = Player.instance;
+
+        StatisticsManager.instance.ResetStatsForNewGame ();
+        enemiesKilled = 0;
+        stageNumber = 0;
+
         #if UNITY_EDITOR
         if (testMode) return;
         #endif
@@ -30,8 +37,10 @@ public class StageManager : MonoBehaviour
     }
 
     public void StartStage () {
-        player.GetComponent<Health> ().TakeHealing (25);
+        Health hp = player.GetComponent<Health>();
+        hp.TakeHealing (hp.maxHealth);
         currentStage = Instantiate(stages[stageNumber++]);
+        MessageText.instance.DisplayMessage ("Wave - " + stageNumber);
         StartCoroutine(SpawnRoutine ());
     }
 
@@ -76,12 +85,13 @@ public class StageManager : MonoBehaviour
 
     public void EnemyDefeated () {
         enemyCurrentAmount--;
+        enemiesKilled++;
         if (currentStage == null) return;
 
         if (enemyCurrentAmount <= 0 && !IsSpawningEnemies ()) {
             CheatCommand.instance.KillAllEnemies ();
             if (stageNumber >= stages.Count) {
-                print ("TODO Game over");
+                HandleWinGame ();
                 return;
             }
             else {
@@ -92,5 +102,27 @@ public class StageManager : MonoBehaviour
 
     public void RegisterNewEnemy () => enemyCurrentAmount++;
 
+    private void HandleWinGame() {
+        MessageText.instance.DisplayMessage ("All threats have been vanquished!", 8f);
+
+        StatisticsManager.instance.RecordGameStats (stageNumber, enemiesKilled);
+        StartCoroutine (LoadMainMenuAfterDelay (8));
+    }
+
+    public void HandleLoseGame() {
+        if(stageNumber >= 11) MessageText.instance.DisplayMessage ("Thy heroic stand will not be forgotten. For the while.", 8f);
+        else if (stageNumber >= 6) MessageText.instance.DisplayMessage ("Your efforts were admirable, however in vain they may have been.", 8f);
+        else if (stageNumber > 1) MessageText.instance.DisplayMessage ("Victory is never guaranteed, but with this performance the defeat was.", 8f);
+        else MessageText.instance.DisplayMessage ("Pitiful. Should've just let the winter finish the job.", 8f);
+
+        StatisticsManager.instance.RecordGameStats (stageNumber, enemiesKilled);
+        StartCoroutine (LoadMainMenuAfterDelay (8));
+    }
+
     private bool IsSpawningEnemies () => currentStage.enemiesToSpawn.Any (esd => esd.spawnAmount > 0);
+
+    IEnumerator LoadMainMenuAfterDelay ( float delay ) {
+        yield return new WaitForSeconds (delay); // Wait for the specified delay
+        SceneManager.LoadScene ("MainMenu"); // Replace "MainMenu" with the actual name of your main menu scene
+    }
 }

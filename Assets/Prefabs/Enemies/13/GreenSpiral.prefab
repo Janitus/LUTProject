@@ -49,8 +49,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54b1697a88dd4af428ac6c91c89fd76a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 8
-  rotationSpeed: 90
+  movementSpeed: 5
+  rotationSpeed: 60
   initiallyFaceAway: 0
   spriteChild: {fileID: 3100770182821151801}
   ignoreSpriteRotation: 1

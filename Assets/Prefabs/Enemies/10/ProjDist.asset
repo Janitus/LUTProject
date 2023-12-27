@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a28e3234ad289a42a1844f5b35d3385, type: 3}
   m_Name: ProjDist
   m_EditorClassIdentifier: 
-  maximumDistance: 12
+  maximumDistance: 7
