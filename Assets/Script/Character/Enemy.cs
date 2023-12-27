@@ -28,8 +28,7 @@ public class Enemy : Character
         AimAtPlayer ();
         foreach (Ability ability in abilities) {
             if (ability.status == Ability.Status.Ready) {
-                ability.Activate ();
-                return;
+                if (ability.Activate ()) return;
             }
         }
     }

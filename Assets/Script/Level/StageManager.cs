@@ -79,6 +79,7 @@ public class StageManager : MonoBehaviour
         if (currentStage == null) return;
 
         if (enemyCurrentAmount <= 0 && !IsSpawningEnemies ()) {
+            CheatCommand.instance.KillAllEnemies ();
             if (stageNumber >= stages.Count) {
                 print ("TODO Game over");
                 return;

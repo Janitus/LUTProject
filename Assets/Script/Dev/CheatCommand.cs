@@ -2,13 +2,17 @@ using UnityEngine;
 
 public class CheatCommand : MonoBehaviour
 {
+    public static CheatCommand instance;
+
+    private void Start () => instance = this;
+
     void Update () {
         if (Input.GetKeyDown (KeyCode.P)) {
             KillAllEnemies ();
         }
     }
 
-    void KillAllEnemies () {
+    public void KillAllEnemies () {
         GameObject[] enemies = GameObject.FindGameObjectsWithTag ("Enemy");
 
         foreach (GameObject enemy in enemies) {

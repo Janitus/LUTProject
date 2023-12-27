@@ -20,14 +20,15 @@ public abstract class Ability : MonoBehaviour
         if (character == null) this.enabled = false;
     }
 
-    public void Activate() {
-        if (status != Status.Ready || !ConditionsMet ()) return;
+    public bool Activate() {
+        if (status != Status.Ready || !ConditionsMet ()) return false;
 
         status = Status.Cooldown;
         cooldown = cooldownDuration;
         character.castingTime = castDuration;
 
         StartCoroutine (ActivationDelay ());
+        return true;
     }
 
     private bool ConditionsMet () {
