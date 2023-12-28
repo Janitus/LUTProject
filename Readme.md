@@ -1,10 +1,16 @@
-## What is this project
+## What is this project?
 
 This is a unity project made for LUT course: CT60A5401 Game Development Project.
 
 The project is a 2D action game with some bullethell and roguelite elements.
 
 ![snapshot](https://i.gyazo.com/ccd65e4f5b29e5f02a96d4d02fe72dcb.jpg)
+
+## How do I play this?
+
+Download the Build.rar, unzip it and start the .exe.
+
+The game is meant to be played using keyboard and mouse. More information can be found within the game under the help section.
 
 ## Credits:
 
