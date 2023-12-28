@@ -8,7 +8,7 @@ The project is a 2D action game with some bullethell and roguelite elements.
 
 ## Credits:
 
-The project uses sprite art and sounds available from opengameart.
+The project uses sprite art, sounds and music available from opengameart.
 
 Redshrike
 - https://opengameart.org/content/rpg-enemies-11-dragons
@@ -20,3 +20,8 @@ Kyrise
 
 SubspaceAudio
 - https://opengameart.org/content/512-sound-effects-8-bit-style
+- https://opengameart.org/content/5-chiptunes-action
+
+Nene
+- https://opengameart.org/content/boss-battle-3-8-bit-re-upload
+- https://opengameart.org/content/long-away-home-8bit
