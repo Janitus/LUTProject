@@ -6,6 +6,8 @@ The project is a 2D action game with some bullethell and roguelite elements.
 
 ![snapshot](https://i.gyazo.com/ccd65e4f5b29e5f02a96d4d02fe72dcb.jpg)
 
+muokkaus
+
 ## How do I play this?
 
 Download the Build.rar, unzip it and start the .exe.
