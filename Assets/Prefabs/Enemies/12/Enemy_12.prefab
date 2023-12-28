@@ -36,7 +36,7 @@ Transform:
   - {fileID: 180416244514003870}
   - {fileID: 6367947411219181415}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7579104205565352763
 SpriteRenderer:
@@ -108,6 +108,8 @@ MonoBehaviour:
   aim: {x: 0, y: 0}
   castingTime: 2
   healthSystem: {fileID: 0}
+  deathSound: {fileID: 0}
+  isBoss: 0
 --- !u!50 &9426483263456434
 Rigidbody2D:
   serializedVersion: 4
@@ -234,6 +236,7 @@ MonoBehaviour:
   activationDelay: 0.3
   conditions:
   - {fileID: 11400000, guid: a6d66699930750d428415b1072a5af9f, type: 2}
+  audio: {fileID: 8300000, guid: 9742aa3a9dda03f4eab089ebb7efa552, type: 3}
   damage: 30
   knockback: 20
   penetration: 20
@@ -287,6 +290,7 @@ MonoBehaviour:
   activationDelay: 5
   conditions:
   - {fileID: 11400000, guid: cc1a89ec79f0b8f419a7ab0868f99207, type: 2}
+  audio: {fileID: 8300000, guid: 92d44524795689b4bb70e0eaa14e8ce2, type: 3}
   summonedGameObject: {fileID: 5704939730455866808, guid: 46a1cf6090d192b4a8078b5d04d9973e, type: 3}
   distance: 2.5
   amount: 6

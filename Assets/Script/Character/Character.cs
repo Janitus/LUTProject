@@ -16,6 +16,7 @@ public abstract class Character : MonoBehaviour
 
     public float castingTime;
     public Health healthSystem;
+    public AudioClip deathSound;
 
     protected Ability[] abilities;
 
@@ -53,7 +54,9 @@ public abstract class Character : MonoBehaviour
 
     public virtual void RefreshAim () {}
 
-    public virtual void Die() {}
+    public virtual void Die() {
+        if (deathSound != null && AudioManager.instance != null) AudioManager.instance.PlaySound (deathSound);
+    }
 
     protected void SetSpriteDirection () {
         if (aim.x < 0) 

@@ -50,6 +50,7 @@ MonoBehaviour:
   activationDelay: 0
   conditions:
   - {fileID: 11400000, guid: 72205a8121006ac478f51a811c8eceee, type: 2}
+  audio: {fileID: 8300000, guid: 210c6886e7a600c4e8a8fb6c64694519, type: 3}
   damage: 2
   knockback: 1
   penetration: 1
@@ -103,6 +104,7 @@ MonoBehaviour:
   activationDelay: 1
   conditions:
   - {fileID: 11400000, guid: c1deb0a4ebe396e45b38cb648fc3bd44, type: 2}
+  audio: {fileID: 8300000, guid: 947fbc304c79f0447b8d231380e7f29d, type: 3}
   distance: 6
   duration: 0.6
   stopAtDestination: 0
@@ -214,6 +216,7 @@ MonoBehaviour:
   aim: {x: 0, y: 0}
   castingTime: 2
   healthSystem: {fileID: 0}
+  deathSound: {fileID: 0}
   isBoss: 0
 --- !u!50 &8346285953219626980
 Rigidbody2D:

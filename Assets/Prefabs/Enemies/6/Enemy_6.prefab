@@ -108,6 +108,7 @@ MonoBehaviour:
   penetration: 1
   knockback: 2
   pierceAmount: 0
+  ignoreCharacter: 0
 --- !u!114 &3183540320748744457
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -126,6 +127,7 @@ MonoBehaviour:
   activationDelay: 1
   conditions:
   - {fileID: 11400000, guid: 2a9c1460503f3d84497c64b460f5f99b, type: 2}
+  audio: {fileID: 8300000, guid: 4a44b547acac43f4c96fae5222895df7, type: 3}
 --- !u!1 &4532295377353183818
 GameObject:
   m_ObjectHideFlags: 0
@@ -234,6 +236,7 @@ MonoBehaviour:
   penetration: 1
   knockback: 2
   pierceAmount: 0
+  ignoreCharacter: 0
 --- !u!114 &3234493725189575354
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -252,6 +255,7 @@ MonoBehaviour:
   activationDelay: 1
   conditions:
   - {fileID: 11400000, guid: 2a9c1460503f3d84497c64b460f5f99b, type: 2}
+  audio: {fileID: 8300000, guid: 4a44b547acac43f4c96fae5222895df7, type: 3}
 --- !u!1 &6941499341736711172
 GameObject:
   m_ObjectHideFlags: 0
@@ -360,6 +364,8 @@ MonoBehaviour:
   aim: {x: 0, y: 0}
   castingTime: 2
   healthSystem: {fileID: 0}
+  deathSound: {fileID: 0}
+  isBoss: 0
 --- !u!50 &1954830141466268011
 Rigidbody2D:
   serializedVersion: 4

@@ -50,6 +50,7 @@ MonoBehaviour:
   activationDelay: 0.3
   conditions:
   - {fileID: 11400000, guid: 14ac4cbeac33be74388178c70c36dee4, type: 2}
+  audio: {fileID: 8300000, guid: 80c3e9297de4a424bafc9d36d5c78c50, type: 3}
   damage: 20
   knockback: 10
   penetration: 10
@@ -89,7 +90,7 @@ Transform:
   - {fileID: 3321331810099888470}
   - {fileID: 9059522295234443134}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4988010915565324436
 SpriteRenderer:
@@ -161,6 +162,7 @@ MonoBehaviour:
   aim: {x: 0, y: 0}
   castingTime: 2
   healthSystem: {fileID: 0}
+  deathSound: {fileID: 0}
   isBoss: 0
 --- !u!50 &5234992086418263875
 Rigidbody2D:
@@ -365,3 +367,4 @@ MonoBehaviour:
   activationDelay: 0
   conditions:
   - {fileID: 11400000, guid: c85b3a178331e8147add2c5ae77bcb91, type: 2}
+  audio: {fileID: 8300000, guid: 471e03f21d8acb34ea307e2884b55aa7, type: 3}

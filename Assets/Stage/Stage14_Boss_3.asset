@@ -17,3 +17,4 @@ MonoBehaviour:
   - enemyPrefabs:
     - {fileID: 2986557210627666711, guid: 5050a796c77aba748a853f1f16baf504, type: 3}
     spawnAmount: 1
+  music: {fileID: 8300000, guid: e8023638d025374418b63bb78a0f76c5, type: 3}

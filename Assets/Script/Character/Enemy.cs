@@ -50,6 +50,7 @@ public class Enemy : Character
         if (dead) return; // Weird bug that causes this to happen multiple times.
         dead = true;
         StageManager.instance.EnemyDefeated ();
+        base.Die ();
         Destroy (gameObject);
     }
 

@@ -127,6 +127,7 @@ MonoBehaviour:
   activationDelay: 1
   conditions:
   - {fileID: 11400000, guid: 98aa86d44bd92e74e8ab0c4501231533, type: 2}
+  audio: {fileID: 8300000, guid: 7bbfe6ef9a025f1408e8a4a8dc8134af, type: 3}
 --- !u!1 &4920059482410383061
 GameObject:
   m_ObjectHideFlags: 0
@@ -177,6 +178,7 @@ MonoBehaviour:
   activationDelay: 1
   conditions:
   - {fileID: 11400000, guid: 786fb181d2c51db469c39bc90ebc370f, type: 2}
+  audio: {fileID: 8300000, guid: 11ba186a7d941bb48b4d247bff17e939, type: 3}
   summonedGameObject: {fileID: 5562762653227859172, guid: 83a9ed6c02b656d48a27aa6a1b0534a3, type: 3}
   distance: 10
   amount: 1
@@ -221,7 +223,7 @@ Transform:
   - {fileID: 3266332089943501092}
   - {fileID: 9218604475274224627}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6616248153930054271
 SpriteRenderer:
@@ -293,6 +295,7 @@ MonoBehaviour:
   aim: {x: 0, y: 0}
   castingTime: 2
   healthSystem: {fileID: 0}
+  deathSound: {fileID: 0}
   isBoss: 1
 --- !u!50 &3041100071226800493
 Rigidbody2D:
@@ -368,7 +371,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9470e2d823b6d7f49a43cb6900c7ebd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 1500
+  maxHealth: 1250
   armor: 10
 --- !u!1 &7008308091183976786
 GameObject:
@@ -420,6 +423,7 @@ MonoBehaviour:
   activationDelay: 0
   conditions:
   - {fileID: 11400000, guid: c51f3aac66880754c9f79f658070248d, type: 2}
+  audio: {fileID: 8300000, guid: d7c42caf730b5264cbc08f3834978c20, type: 3}
   distance: 10
   duration: 1
   stopAtDestination: 0
@@ -473,6 +477,7 @@ MonoBehaviour:
   activationDelay: 1
   conditions:
   - {fileID: 11400000, guid: 7e416f7b39b7ad54f93082a7337cee79, type: 2}
+  audio: {fileID: 8300000, guid: 11ba186a7d941bb48b4d247bff17e939, type: 3}
   summonedGameObject: {fileID: 5562762653227859172, guid: 6899ee2caba00824591ab02e6b43243c, type: 3}
   distance: 10
   amount: 1
@@ -527,6 +532,7 @@ MonoBehaviour:
   activationDelay: 0.1
   conditions:
   - {fileID: 11400000, guid: a2d19acc41d34af4489845242538ef90, type: 2}
+  audio: {fileID: 8300000, guid: 48bfb2d559743de47b747de77063ae51, type: 3}
   damage: 20
   knockback: 20
   penetration: 6
@@ -658,6 +664,7 @@ MonoBehaviour:
   activationDelay: 1
   conditions:
   - {fileID: 11400000, guid: 98aa86d44bd92e74e8ab0c4501231533, type: 2}
+  audio: {fileID: 8300000, guid: 82a35a3c462287a4a962d84799785120, type: 3}
 --- !u!114 &4268182856641942495
 MonoBehaviour:
   m_ObjectHideFlags: 0

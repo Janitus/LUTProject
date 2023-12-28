@@ -50,6 +50,7 @@ MonoBehaviour:
   activationDelay: 3
   conditions:
   - {fileID: 11400000, guid: cc1a89ec79f0b8f419a7ab0868f99207, type: 2}
+  audio: {fileID: 8300000, guid: 52b2320d161a03a4e9023426c4f635ec, type: 3}
   summonedGameObject: {fileID: 7195739632498907565, guid: 2b6ef63982e290f479ecdf4382bf2987, type: 3}
   distance: 10
   amount: 5
@@ -200,6 +201,7 @@ MonoBehaviour:
   activationDelay: 1
   conditions:
   - {fileID: 11400000, guid: 98aa86d44bd92e74e8ab0c4501231533, type: 2}
+  audio: {fileID: 8300000, guid: 1d8a55ecc5cc2a84f89d8ced6f5958f3, type: 3}
 --- !u!114 &4044054374229868679
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -369,6 +371,7 @@ MonoBehaviour:
   activationDelay: 1
   conditions:
   - {fileID: 11400000, guid: 98aa86d44bd92e74e8ab0c4501231533, type: 2}
+  audio: {fileID: 8300000, guid: bfcb1c2f17d6c034b8ecb3dfa321e00d, type: 3}
 --- !u!114 &2953181126488128923
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -529,6 +532,7 @@ MonoBehaviour:
   activationDelay: 1
   conditions:
   - {fileID: 11400000, guid: 98aa86d44bd92e74e8ab0c4501231533, type: 2}
+  audio: {fileID: 8300000, guid: bfcb1c2f17d6c034b8ecb3dfa321e00d, type: 3}
 --- !u!114 &2784125868856506750
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -581,7 +585,7 @@ Transform:
   - {fileID: 7859505349436151133}
   - {fileID: 1424347441536237389}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &8437837014164294262
 SpriteRenderer:
@@ -653,6 +657,7 @@ MonoBehaviour:
   aim: {x: 0, y: 0}
   castingTime: 2
   healthSystem: {fileID: 0}
+  deathSound: {fileID: 0}
   isBoss: 1
 --- !u!50 &2029839249342223348
 Rigidbody2D:

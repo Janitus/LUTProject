@@ -12,6 +12,8 @@ public abstract class Ability : MonoBehaviour
     public float activationDelay = 1f; // The activation timer after the casting was started
     public List<Condition> conditions = new List<Condition> ();
 
+    public AudioClip audio;
+
     private float cooldown = 0f;
     protected Character character;
 
@@ -39,6 +41,7 @@ public abstract class Ability : MonoBehaviour
 
     private IEnumerator ActivationDelay () {
         yield return new WaitForSeconds (activationDelay);
+        if (audio != null) AudioManager.instance.PlaySound (audio);
         HandleActivation ();
     }
 

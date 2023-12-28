@@ -50,6 +50,7 @@ MonoBehaviour:
   activationDelay: 0
   conditions:
   - {fileID: 11400000, guid: cebb4cc6697bafc44bdd6e08d7355214, type: 2}
+  audio: {fileID: 8300000, guid: 210c6886e7a600c4e8a8fb6c64694519, type: 3}
   damage: 1
   knockback: 1
   penetration: 0
@@ -160,6 +161,8 @@ MonoBehaviour:
   aim: {x: 0, y: 0}
   castingTime: 2
   healthSystem: {fileID: 0}
+  deathSound: {fileID: 0}
+  isBoss: 0
 --- !u!50 &8346285953219626980
 Rigidbody2D:
   serializedVersion: 4

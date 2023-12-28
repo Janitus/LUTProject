@@ -47,6 +47,7 @@ public class Player : Character
 
     public override void Die () {
         StageManager.instance.HandleLoseGame ();
+        base.Die ();
         Destroy (this.gameObject);
     }
 }

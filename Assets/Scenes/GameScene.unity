@@ -599,6 +599,7 @@ MonoBehaviour:
   castDuration: 0
   activationDelay: 0
   conditions: []
+  audio: {fileID: 8300000, guid: f65d8a15a68a8c64f807bd010b92ce7e, type: 3}
 --- !u!114 &260883963
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1468,6 +1469,7 @@ MonoBehaviour:
   castDuration: 0.15
   activationDelay: 0
   conditions: []
+  audio: {fileID: 8300000, guid: e65ddbf8eca5c054b976a22281be51aa, type: 3}
   distance: 3
   duration: 0.125
   stopAtDestination: 1
@@ -2058,8 +2060,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.004150033, y: 0.0062999725, z: 0}
-    m_Extent: {x: 1.00545, y: 1.0034, z: 0}
+    m_Center: {x: -0.0012000203, y: 0.0076000094, z: 0}
+    m_Extent: {x: 1.0084, y: 1.0002999, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -2229,6 +2231,7 @@ MonoBehaviour:
   aim: {x: 0, y: 0}
   castingTime: 2
   healthSystem: {fileID: 0}
+  deathSound: {fileID: 8300000, guid: 7b73ef11c84bc0b4884222ad21bb2ad1, type: 3}
   playerInput: {x: 0, y: 0}
 --- !u!212 &1336439395
 SpriteRenderer:

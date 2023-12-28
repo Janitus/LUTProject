@@ -108,6 +108,7 @@ MonoBehaviour:
   penetration: 10
   knockback: 10
   pierceAmount: 1
+  ignoreCharacter: 0
 --- !u!114 &3515666499960223436
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -126,6 +127,7 @@ MonoBehaviour:
   activationDelay: 2
   conditions:
   - {fileID: 11400000, guid: 11caf1cac29bab5449380dcb724e4d24, type: 2}
+  audio: {fileID: 8300000, guid: 471e03f21d8acb34ea307e2884b55aa7, type: 3}
 --- !u!1 &2542127233810883488
 GameObject:
   m_ObjectHideFlags: 0
@@ -163,7 +165,7 @@ Transform:
   - {fileID: 2343085365906332732}
   - {fileID: 428283304559941158}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2202521432544980820
 SpriteRenderer:
@@ -235,6 +237,8 @@ MonoBehaviour:
   aim: {x: 0, y: 0}
   castingTime: 2
   healthSystem: {fileID: 0}
+  deathSound: {fileID: 0}
+  isBoss: 0
 --- !u!50 &2775375414594903291
 Rigidbody2D:
   serializedVersion: 4
@@ -361,6 +365,7 @@ MonoBehaviour:
   activationDelay: 3
   conditions:
   - {fileID: 11400000, guid: d9ccc30da7f0e0044b05b6fa1645160a, type: 2}
+  audio: {fileID: 8300000, guid: 92d44524795689b4bb70e0eaa14e8ce2, type: 3}
   summonedGameObject: {fileID: 4053121301219037989, guid: 22b950e57433e194c8d8b95206fc8608, type: 3}
   distance: 1
   amount: 3
@@ -415,6 +420,7 @@ MonoBehaviour:
   activationDelay: 2
   conditions:
   - {fileID: 11400000, guid: d9ccc30da7f0e0044b05b6fa1645160a, type: 2}
+  audio: {fileID: 8300000, guid: bd34172a2238ab54e972e0ee4484b2b9, type: 3}
   summonedGameObject: {fileID: 364386872371843360, guid: 2f5db4dcd9804354183323e490e0c6d8, type: 3}
   distance: 1
   amount: 1

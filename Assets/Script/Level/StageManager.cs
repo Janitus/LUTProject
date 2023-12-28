@@ -41,6 +41,7 @@ public class StageManager : MonoBehaviour
         hp.TakeHealing (hp.maxHealth);
         currentStage = Instantiate(stages[stageNumber++]);
         MessageText.instance.DisplayMessage ("Wave - " + stageNumber);
+        if(currentStage.music != null) AudioManager.instance.PlayMusic (currentStage.music);
         StartCoroutine(SpawnRoutine ());
     }
 
@@ -113,7 +114,7 @@ public class StageManager : MonoBehaviour
         if(stageNumber >= 11) MessageText.instance.DisplayMessage ("Thy heroic stand will not be forgotten. For the while.", 8f);
         else if (stageNumber >= 6) MessageText.instance.DisplayMessage ("Your efforts were admirable, however in vain they may have been.", 8f);
         else if (stageNumber > 1) MessageText.instance.DisplayMessage ("Victory is never guaranteed, but with this performance the defeat was.", 8f);
-        else MessageText.instance.DisplayMessage ("Pitiful. Should've just let the winter finish the job.", 8f);
+        else MessageText.instance.DisplayMessage ("Pitiful.", 8f);
 
         StatisticsManager.instance.RecordGameStats (stageNumber, enemiesKilled);
         StartCoroutine (LoadMainMenuAfterDelay (8));
@@ -123,6 +124,7 @@ public class StageManager : MonoBehaviour
 
     IEnumerator LoadMainMenuAfterDelay ( float delay ) {
         yield return new WaitForSeconds (delay); // Wait for the specified delay
+        AudioManager.instance.PlayMenuMusic ();
         SceneManager.LoadScene ("MainMenu"); // Replace "MainMenu" with the actual name of your main menu scene
     }
 }

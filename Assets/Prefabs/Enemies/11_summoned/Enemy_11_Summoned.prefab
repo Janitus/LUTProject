@@ -35,7 +35,7 @@ Transform:
   m_Children:
   - {fileID: 2757762805566382213}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4102631141171983583
 SpriteRenderer:
@@ -107,6 +107,8 @@ MonoBehaviour:
   aim: {x: 0, y: 0}
   castingTime: 2
   healthSystem: {fileID: 0}
+  deathSound: {fileID: 0}
+  isBoss: 0
 --- !u!50 &7845364699187482587
 Rigidbody2D:
   serializedVersion: 4
@@ -233,6 +235,7 @@ MonoBehaviour:
   activationDelay: 0.3
   conditions:
   - {fileID: 11400000, guid: ed82d11f911d03e4abc72a6ac8a46f48, type: 2}
+  audio: {fileID: 8300000, guid: 210c6886e7a600c4e8a8fb6c64694519, type: 3}
   damage: 10
   knockback: 5
   penetration: 2
